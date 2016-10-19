@@ -14,6 +14,10 @@
 		10ADBAF91DB796E9009F7C2B /* FacebookLoginExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10ADBAF71DB796E9009F7C2B /* FacebookLoginExercise.xcdatamodeld */; };
 		10ADBAFB1DB796E9009F7C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10ADBAFA1DB796E9009F7C2B /* Assets.xcassets */; };
 		10ADBAFE1DB796E9009F7C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10ADBAFC1DB796E9009F7C2B /* LaunchScreen.storyboard */; };
+		10ADBB091DB797BA009F7C2B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ADBB051DB797BA009F7C2B /* Bolts.framework */; };
+		10ADBB0A1DB797BA009F7C2B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ADBB061DB797BA009F7C2B /* FBSDKCoreKit.framework */; };
+		10ADBB0B1DB797BA009F7C2B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ADBB071DB797BA009F7C2B /* FBSDKLoginKit.framework */; };
+		10ADBB0C1DB797BA009F7C2B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ADBB081DB797BA009F7C2B /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		10ADBAFA1DB796E9009F7C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10ADBAFD1DB796E9009F7C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10ADBAFF1DB796E9009F7C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10ADBB051DB797BA009F7C2B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		10ADBB061DB797BA009F7C2B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		10ADBB071DB797BA009F7C2B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		10ADBB081DB797BA009F7C2B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10ADBB0C1DB797BA009F7C2B /* FBSDKShareKit.framework in Frameworks */,
+				10ADBB091DB797BA009F7C2B /* Bolts.framework in Frameworks */,
+				10ADBB0A1DB797BA009F7C2B /* FBSDKCoreKit.framework in Frameworks */,
+				10ADBB0B1DB797BA009F7C2B /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +72,7 @@
 		10ADBAEA1DB796E9009F7C2B /* FacebookLoginExercise */ = {
 			isa = PBXGroup;
 			children = (
+				10ADBB0D1DB797C1009F7C2B /* FacebookSDK */,
 				10ADBAEE1DB796E9009F7C2B /* AppDelegate.h */,
 				10ADBAEF1DB796E9009F7C2B /* AppDelegate.m */,
 				10ADBAF11DB796E9009F7C2B /* ViewController.h */,
@@ -80,6 +93,17 @@
 				10ADBAEC1DB796E9009F7C2B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10ADBB0D1DB797C1009F7C2B /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				10ADBB051DB797BA009F7C2B /* Bolts.framework */,
+				10ADBB061DB797BA009F7C2B /* FBSDKCoreKit.framework */,
+				10ADBB071DB797BA009F7C2B /* FBSDKLoginKit.framework */,
+				10ADBB081DB797BA009F7C2B /* FBSDKShareKit.framework */,
+			);
+			name = FacebookSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +300,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97365M2U5B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookLoginExercise",
+				);
 				INFOPLIST_FILE = FacebookLoginExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HippoColors.FacebookLoginExercise;
@@ -288,6 +316,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97365M2U5B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookLoginExercise",
+				);
 				INFOPLIST_FILE = FacebookLoginExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HippoColors.FacebookLoginExercise;
